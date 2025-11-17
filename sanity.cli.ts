@@ -1,6 +1,9 @@
 import {defineCliConfig} from 'sanity/cli'
 
 export default defineCliConfig({
+  project: {
+    basePath: '/acewebsite-backend'
+  },
   api: {
     projectId: 'l6369pm8',
     dataset: 'development'
