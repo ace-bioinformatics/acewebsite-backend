@@ -27,6 +27,11 @@ jobs:
 
       - name: Install dependencies
         run: npm install --frozen-lockfile=false
+        
+      - name: Deploy Schema
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+        run: npx sanity schema deploy
 
       - name: Build
         run: npm run build
